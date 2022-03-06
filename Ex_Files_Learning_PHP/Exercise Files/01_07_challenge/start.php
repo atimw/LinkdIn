@@ -16,4 +16,4 @@ echo '<br>';
 ?>
 <!-- Another solution -->
 <h1>Hello <?php echo $name; ?>!</h1>
-<p>So glad you can join us in <?php echo $city; ?> today! You will be <b><?php echo $friend; ?></b>'s guide as you do a range of activities.</p><p>You will end your day by seeing <i><?php echo $movie ?></i> at 7:00pm. Make sure to bring the money you've been provided. The movie ticket is $12. <?php echo $friend; ?>'s favorite candy is <?php echo $candy; ?>, so grab some of those too. <p>... and of-course, "May the force be with You!"</p>
+<p>So glad you can join us in <?php echo $city; ?> today! You will be <b><?php echo $friend; ?></b>'s guide as you do a range of activities.</p><p>You will end your day by seeing <i><?php echo $movie ?></i> at 7:00pm. Make sure to bring the money you've been provided. The movie ticket is $12. <?php echo $friend; ?>'s favorite candy is <?php echo $candy; ?>, so grab some of those too.</p><p>... and of-course, "May the force be with You!"</p>
