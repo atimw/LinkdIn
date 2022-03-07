@@ -4,15 +4,22 @@ $a = 9 > 5;
 $b = 10 != 10;
 $c = $a && $b;
 $d = $a || $b;
-$e = $b && $c; 
+$e = $b && $c;
 $f = $a || $d;
 
-$logic = array( $a, $b, $c, $d, $e, $f );
+$logic = array(
+	$a, //true
+	$b, //false
+	$c, //false
+	$d, //true
+	$e, //false
+	$f  //true
+);
 
 echo '<pre>';
-var_dump( $logic ); 
+var_dump($logic);
 echo '</pre>';
 
 $c = $a and $b;
 
-var_dump( $c );
+var_dump($c);
