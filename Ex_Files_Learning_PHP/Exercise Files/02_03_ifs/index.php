@@ -13,8 +13,8 @@ if ( 10 < 1 ) {
 
 $i = 10;
 
-if ( 11 == $i ) {
-    echo '<h3>Welcome back, user!</h3>';
+if($i = 11){
+	echo '<h3>Welcome back, user!</h3>';
 } else {
-    echo '<h3>Welcome to the site!</h3>';
+	echo '<h3>Welcome to the site!</h3>';
 }
