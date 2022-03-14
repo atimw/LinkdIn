@@ -5,12 +5,15 @@ while( $i < 10 ) {
     $i++;
 }
 
-for( $i = 10; $i > 0; $i-- ) {
+for($i=10;$i>0;$i--){
     //echo "<p>$i</p>";
 }
 
-$colors = array('red', 'blue', 'green', 'yellow');
-
-for( $i = 0; $i < sizeof($colors); $i++ ) {
+$colors = array('red','blue','green','yellow');
+for ($i = 0; $i < sizeof($colors); $i++){
     echo '<p>' . $colors[$i] . '</p>';
+}
+
+foreach($colors as $color){
+    echo "<p>$color</p>";
 }

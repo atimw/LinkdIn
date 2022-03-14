@@ -12,6 +12,6 @@ $home_towns = array(
     'Brian' => 'Grand Rapids, MI',
 );
 
-foreach( $home_towns as $name => $town ) {
-    echo "<p>$name lives in $town</p>";
+foreach ($home_towns as $name => $town){
+    echo "<p>$name live in $town</p>";
 }
