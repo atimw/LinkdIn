@@ -1,10 +1,9 @@
 <?php
-$names = array( 'Joe', 'Erin', 'Teresa', 'Louis' );
-usort( $names, function($a, $b) {
-    return $a[1] <=> $b[1];
+$names = array('Joe','Erin','Theresa','Lewis');
+usort($names, function($a, $b){
+   return $a[1] <=> $b[1]; 
 });
 ?>
-
 <pre>
-    <?php print_r( $names ); ?>
+    <?php print_r($names);?>
 </pre>

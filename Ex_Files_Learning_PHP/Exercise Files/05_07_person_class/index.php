@@ -31,11 +31,11 @@ class Person {
     }
 }
 
-$joe = new Person( 'Joe', 35 );
-$rob = new Person( 'Rob', 30 );
+$joe = new Person('Joe',35);
+$rob = new Person('Rob',30);
 
-echo $joe->get_name() . '<br/>';
-echo $rob->get_name() . '<br/>';
+echo $joe->get_name() . '<br>';
+echo $rob->get_name(). '<br>';
 
 $joe->set_birthday(true);
 echo $joe->get_age();
