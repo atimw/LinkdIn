@@ -4,7 +4,7 @@
         <title><?php echo $title; ?></title>
     </head>
     <body>
-        <?php include 'template/nav.php'; ?>
+        <?php include 'templates/nav.php'; ?>
         <h1><?php echo $title; ?></h1>
         <p><?php echo $description; ?></p>
         <small>By: <?php echo $author; ?></small>
