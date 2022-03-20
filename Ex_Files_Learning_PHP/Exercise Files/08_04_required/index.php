@@ -1,21 +1,26 @@
-	<?php $form_complete = null; ?>
+	<?php $form_complete = null;?>
 	<h2>Contact</h2>
    
 	<form name="contact" method="POST">
 		<div>
-			<?php 
-				if ( isset( $_POST['name'] ) && empty( trim( $_POST['name'] ) ) ) {
-				 echo "<p class=\"alert\">Name is required</p>"; 
-				 $form_complete = false;
-				}
-			?>
+<?php
+#Validate name field
+if (isset($_POST['name']) && empty(trim($_POST['name']))){
+	$form_complete = false;
+	echo "<p class=\"alert\">Name is required</p>";
+}
+?>
 			<label for="name">Name:</label> <input type="text" name="name" placeholder="Your Name" required/>
 		</div>
 		<div>
 			<?php 
+				$email_regex = '^[\w\.=-]+@[\w\.-]+\.[\w]{2,3}$^';
 				if ( isset( $_POST['email'] ) && empty( trim( $_POST['email'] ) ) ) {
 				 echo "<p class=\"alert\">Email is required</p>"; 
 				 $form_complete = false;
+				} else if (isset($_POST['email']) && ! preg_match($email_regex, $_POST['email'])) {
+					echo "<p class=\"alert\">Please enter a valid email address.</p>";
+					$form_complete = false;
 				}
 			?>
 			<label for="name">Email:</label> <input type="email" name="email" placeholder="Your Email" required/>
@@ -70,13 +75,13 @@
 
 	<?php
 	$form_complete ?: true;
-	if ( $form_complete ) {
+	if ($form_complete){
 		foreach( $_POST as $name => $value ) {
-			if ( 'submit' != $name ) {
-				if ( is_array( $value ) ) {
-					$value = implode( ', ', $value );
-				}
+		   if ( 'submit' != $name ) {
+			   if ( is_array( $value ) ) {
+				   $value = implode( ', ', $value );
+			   }
 				echo "<p><b>" . ucfirst( $name ) ."</b> is $value.</p>";
-			}
+		   }
 		}
 	}
